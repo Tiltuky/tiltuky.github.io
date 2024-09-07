@@ -16,13 +16,13 @@
 
     .about-wrapper .about-left h2,
     .about-wrapper .about-right h2 {
-        font-size: 0.5rem; /* Заголовки уменьшаем еще больше для мобильных */
+        font-size: 0.3rem; /* Заголовки уменьшаем еще больше для мобильных */
     }
 
     /* Текст под заголовками в блоке about */
     .about-wrapper .about-left p,
     .about-wrapper .about-right p {
-        font-size: 0.4rem; /* Уменьшаем размер текста */
+        font-size: 0.2rem; /* Уменьшаем размер текста */
     }
 
     .services-wrapper .service p {
