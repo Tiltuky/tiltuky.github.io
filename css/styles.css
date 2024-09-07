@@ -208,22 +208,22 @@ section {
 }
 
 .about-left h2 {
-    font-size: 2.5rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
 .about-left p {
-    font-size: 1.1rem;
+    font-size: 0.5rem;
     color: #666;
 }
 
 .about-right h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
 .about-right p {
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.6;
     color: #666;
 }
