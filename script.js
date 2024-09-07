@@ -36,5 +36,3 @@ window.addEventListener('scroll', function() {
         block2.classList.remove('active'); // Скрываем второй блок
     }
 });
-
-
