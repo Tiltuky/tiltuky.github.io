@@ -36,3 +36,21 @@ window.addEventListener('scroll', function() {
         block2.classList.remove('active'); // Скрываем второй блок
     }
 });
+
+// Получаем все элементы FAQ
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('h3');
+
+    question.addEventListener('click', () => {
+        // Переключаем класс active на текущем элементе
+        item.classList.toggle('active');
+
+        // Меняем иконку плюс/крест
+        const icon = question.querySelector('i');
+        icon.classList.toggle('fa-plus');
+        icon.classList.toggle('fa-times');
+    });
+});
+

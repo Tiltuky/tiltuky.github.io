@@ -1,4 +1,55 @@
 /* styles.css */
+
+/* Дополнительный медиа-запрос для iPhone 13 (ширина 390px) */
+@media (max-width: 390px) {
+    header h1 {
+        font-size: 1.2rem; /* Делаем заголовок меньше для узких экранов */
+    }
+
+    nav ul {
+        font-size: 2rem; /* Уменьшаем шрифт навигационного меню */
+    }
+
+    .about-wrapper {
+        padding: 1rem;
+    }
+
+    .about-wrapper .about-left h2,
+    .about-wrapper .about-right h2 {
+        font-size: 0.5rem; /* Заголовки уменьшаем еще больше для мобильных */
+    }
+
+    /* Текст под заголовками в блоке about */
+    .about-wrapper .about-left p,
+    .about-wrapper .about-right p {
+        font-size: 0.4rem; /* Уменьшаем размер текста */
+    }
+
+    .services-wrapper .service p {
+        font-size: 0.9rem; /* Уменьшаем шрифт в блоках услуг */
+    }
+
+    .service img {
+        width: 70%; /* Картинки растягиваем по ширине экрана */
+    }
+
+    .pricing-wrapper .pricing h2 {
+        font-size: 0.5rem; /* Уменьшаем размер заголовка в блоке pricing */
+    }
+    
+    .faq-item h3 {
+        font-size: 1.1rem; /* Чуть меньший шрифт для заголовков вопросов */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Уменьшаем текст в футере */
+    }
+
+    section {
+        padding: 1rem 0.5rem; /* Уменьшаем отступы секций */
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -61,7 +112,6 @@ section {
 #portfolio {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
     padding-bottom: 2rem;
     position: relative;
 }
@@ -256,7 +306,7 @@ section {
 #pricing {
     background-color: #e9ecef;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+   
     padding-bottom: 2rem;
 }
 
@@ -281,53 +331,66 @@ section {
     background-color: #575036;
 }
 
-/* Стиль для блока КОНТАКТ */
-#contact {
+/* Стиль для блока FAQ */
+#faq {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-bottom: 2rem;
+    padding: 3rem 2rem;
+    margin-bottom: 0; /* Убедимся, что нет внешнего отступа снизу */
 }
 
-#contact h2 {
+#faq h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #333;
-}
-
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto;
     text-align: left;
 }
 
-#contact-form label {
-    display: block;
-    margin: 0.5rem 0 0.2rem;
+.faq-item {
+    margin-bottom: 1.5rem;
 }
 
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-#contact-form button {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.faq-item h3 {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 }
 
-#contact-form button:hover {
-    background-color: #0056b3;
+.faq-item .faq-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.faq-item .faq-toggle:focus {
+    outline: none;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Достаточно большое значение, чтобы вмещать текст */
+    
+}
+
+.faq-item.active i {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 footer {
@@ -338,5 +401,9 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
-    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.2rem 0; /* Уменьшаем отступы между абзацами */
+    line-height: 1.2; /* Оптимизируем высоту строки */
 }
