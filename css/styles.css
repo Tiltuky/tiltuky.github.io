@@ -1,55 +1,5 @@
 /* styles.css */
 
-/* Дополнительный медиа-запрос для iPhone 13 (ширина 390px) */
-@media (max-width: 390px) {
-    header h1 {
-        font-size: 1.2rem; /* Делаем заголовок меньше для узких экранов */
-    }
-
-    nav ul {
-        font-size: 2rem; /* Уменьшаем шрифт навигационного меню */
-    }
-
-    .about-wrapper {
-        padding: 1rem;
-    }
-
-    .about-wrapper .about-left h2,
-    .about-wrapper .about-right h2 {
-        font-size: 0.3rem; /* Заголовки уменьшаем еще больше для мобильных */
-    }
-
-    /* Текст под заголовками в блоке about */
-    .about-wrapper .about-left p,
-    .about-wrapper .about-right p {
-        font-size: 0.2rem; /* Уменьшаем размер текста */
-    }
-
-    .services-wrapper .service p {
-        font-size: 0.9rem; /* Уменьшаем шрифт в блоках услуг */
-    }
-
-    .service img {
-        width: 70%; /* Картинки растягиваем по ширине экрана */
-    }
-
-    .pricing-wrapper .pricing h2 {
-        font-size: 0.5rem; /* Уменьшаем размер заголовка в блоке pricing */
-    }
-    
-    .faq-item h3 {
-        font-size: 1.1rem; /* Чуть меньший шрифт для заголовков вопросов */
-    }
-
-    footer p {
-        font-size: 0.8rem; /* Уменьшаем текст в футере */
-    }
-
-    section {
-        padding: 1rem 0.5rem; /* Уменьшаем отступы секций */
-    }
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -187,8 +137,8 @@ section {
 /* Стиль для блока ЧТО Я СНИМАЮ */
 #about {
     background-color: #dccea3;
-    padding: 3rem 0;
-    text-align: left;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 .about-wrapper {
@@ -206,24 +156,28 @@ section {
 }
 
 .about-left h2 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.1rem;
 }
 
 .about-left p {
-    font-size: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
     color: #666;
 }
 
 .about-right h2 {
-    font-size: 1rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .about-right p {
-    font-size: 0.5rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 1rem; /* Добавляем отступ слева */
+    padding-right: 1rem; /* Добавляем отступ справа */
     color: #666;
+    text-align: justify;
 }
 
 /* Стиль для блока ПОРТФОЛИО */
