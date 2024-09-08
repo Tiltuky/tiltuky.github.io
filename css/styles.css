@@ -192,19 +192,17 @@ section {
 }
 
 .about-wrapper {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.about-left {
-    flex: 0 0 35%;
-}
-
+.about-left,
 .about-right {
-    flex: 0 0 65%;
+    margin-bottom: 2rem; /* Отступы между блоками */
+    width: 100%; /* Блоки будут занимать всю ширину */
 }
 
 .about-left h2 {
