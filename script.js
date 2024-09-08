@@ -42,15 +42,29 @@ const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
     const question = item.querySelector('h3');
+    const icon = question.querySelector('i'); // Получаем иконку
 
     question.addEventListener('click', () => {
+        // Сначала закрываем все активные элементы FAQ, чтобы они сворачивались при клике на другой элемент
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+                const otherIcon = otherItem.querySelector('h3 i');
+                otherIcon.classList.remove('fa-times');
+                otherIcon.classList.add('fa-plus');
+            }
+        });
+
         // Переключаем класс active на текущем элементе
         item.classList.toggle('active');
 
         // Меняем иконку плюс/крест
-        const icon = question.querySelector('i');
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-times');
+        if (item.classList.contains('active')) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-plus');
+        }
     });
 });
-
