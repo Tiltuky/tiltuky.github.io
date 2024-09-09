@@ -1,9 +1,5 @@
 /* styles.css */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -17,16 +13,20 @@ header {
     background: #000;
     color: white;
     padding: 1rem 2rem;
-    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex; /* Используем flexbox */
+    justify-content: space-between; /* Распределяем контент по краям */
+    align-items: center; /* Выравниваем по вертикали */
+    max-width: 100%; /* Ограничивает ширину шапки */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Немного уменьшаем заголовок для лучшего размещения */
+    
 }
 
 nav ul {
@@ -36,8 +36,12 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin-right: 2rem;
+    position: relative;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
 }
 
 nav li {
@@ -49,6 +53,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+    padding: 10px 15px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -60,6 +65,41 @@ section {
     padding: 0;
     margin: 0;
     text-align: center;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 0.5rem; /* Уменьшаем отступ внутри блока */
+    top: 40px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 150px; /* Минимальная ширина выпадающего блока */
+}
+
+.dropdown-content li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 6px 12px; /* Уменьшаем отступы внутри элементов */
+    font-size: 0.9rem; /* Уменьшаем размер шрифта */
+}
+
+.dropdown-content li a:hover {
+    background-color: #555;
+    color: #ff6347;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Добавьте это правило для создания отступа сверху */
@@ -245,6 +285,21 @@ section {
     background-color: #575036;
 }
 
+/* Стиль для конпки в блоке портфолио */
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #ff6347;
+}
+
 /* Стиль для блока БЭКГРАНУД */
 #block1 {
     width: 80%; /* Ширина блока */
@@ -283,20 +338,20 @@ section {
     color: #333;
 }
 
-#pricing button {
+.button-link {
     display: inline-block;
-    padding: 0.7rem 1.5rem;
-    background-color: #b5a368;
+    padding: 10px 20px;
+    background-color: #333;
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
-#pricing button:hover {
-    background-color: #575036;
+.button-link:hover {
+    background-color: #ff6347;
 }
+
 
 /* Стиль для блока FAQ */
 #faq {
