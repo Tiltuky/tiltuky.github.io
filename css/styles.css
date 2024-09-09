@@ -312,7 +312,7 @@ section {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('../photo/index/back1.jpg');
+    background-image: url('https://github.com/Tiltuky/tiltuky.github.io/blob/main/photo/index/back1.JPG?raw=true');
     background-size: cover;
     background-position: center;
     z-index: -1; /* Отправляем блок за другие элементы */
