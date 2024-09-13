@@ -182,6 +182,7 @@ section {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 /* CSS для модального окна */
@@ -189,7 +190,7 @@ section {
     display: none; /* Скрыто по умолчанию */
     position: fixed;
     z-index: 1000;
-    padding-top: 60px;
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -230,6 +231,33 @@ section {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Стрелки для переключения фотографий */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* Стиль для нижнего блока */
