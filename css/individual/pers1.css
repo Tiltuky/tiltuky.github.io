@@ -1,0 +1,249 @@
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    header h1 {
+        margin-bottom: 1rem; /* Отступ снизу для заголовка */
+        font-size: 1.8rem; /* Уменьшаем размер заголовка для мобильных устройств */
+        
+        width: 100%; /* Заголовок занимает всю ширину */
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Создаем две колонки */
+        grid-template-rows: auto auto; /* Две строки */
+        grid-gap: 0.5rem; /* Отступ между элементами */
+       
+        align-items: center; /* Выравниваем по вертикали */
+        width: 100%; /* Меню растягивается на всю ширину */
+    }
+
+    nav ul li {
+        margin: 0; /* Убираем лишние отступы */
+    }
+
+    /* Явное расположение пунктов меню */
+    nav ul li:nth-child(1) {
+        grid-column: 1; /* "Главная" в первой колонке */
+        grid-row: 1; /* В первой строке */
+    }
+
+    nav ul li:nth-child(2) {
+        grid-column: 2; /* "Портфолио" во второй колонке */
+        grid-row: 1; /* В первой строке */
+    }
+
+    nav ul li:nth-child(3) {
+        grid-column: 1; /* "Стоимость" в первой колонке */
+        grid-row: 2; /* Во второй строке */
+    }
+
+    nav ul li:nth-child(4) {
+        grid-column: 2; /* "Контакты" во второй колонке */
+        grid-row: 2; /* Во второй строке */
+    }
+
+    .gallery .photo img {
+        max-height: 300px;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    background: #000;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Используем flexbox */
+    justify-content: space-between; /* Распределяем контент по краям */
+    align-items: center; /* Выравниваем по вертикали */
+    max-width: 100%; /* Ограничивает ширину шапки */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* Немного уменьшаем заголовок для лучшего размещения */
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 2rem;
+    position: relative;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1rem; /* или другой отступ */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+section {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 0.5rem; /* Уменьшаем отступ внутри блока */
+    top: 40px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 150px; /* Минимальная ширина выпадающего блока */
+}
+
+.dropdown-content li {
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 6px 12px; /* Уменьшаем отступы внутри элементов */
+    font-size: 0.9rem; /* Уменьшаем размер шрифта */
+}
+
+.dropdown-content li a:hover {
+    background-color: #555;
+    color: #ff6347;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Добавьте это правило для создания отступа сверху */
+.anchor {
+    display: block;
+    position: absolute;
+    top: -100px; /* Adjust this value as needed */
+    visibility: hidden;
+}
+
+/* Gallery styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 2rem;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS для модального окна */
+.lightbox {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.lightbox-content {
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стиль для нижнего блока */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0.2rem 0; /* Уменьшаем отступы между абзацами */
+    line-height: 1.2; /* Оптимизируем высоту строки */
+}
