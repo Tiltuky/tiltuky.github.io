@@ -182,13 +182,12 @@ section {
 
 .pricing-details h2 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
-    margin: 5px 0;
+    margin: 20px 0 10px; /* Верхний отступ - 20px, нижний - 10px */
 }
 
 .pricing-details p {
-    font-size: 2.0rem;
-    margin: 5px 0;
+    font-size: 1.0rem;
+    margin: 10px 0; /* Верхний и нижний отступы - 10px */
 }
 
 .order-btn {
