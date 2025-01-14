@@ -276,7 +276,7 @@ section {
 .about-left p {
     font-size: 1.5rem;
     margin-top: 0.1rem;
-    color: #666;
+    color: #4a4a4a;
 }
 
 .about-right h2 {
@@ -289,7 +289,7 @@ section {
     line-height: 1.5;
     padding-left: 1rem; /* Добавляем отступ слева */
     padding-right: 1rem; /* Добавляем отступ справа */
-    color: #666;
+    color: #4a4a4a;
     text-align: justify;
 }
 
