@@ -1,5 +1,5 @@
 const gallery = document.getElementById('photo-gallery');
-const photoCount = 31; // Количество фотографий
+const photoCount = 89; // Количество фотографий
 const photoFolder = 'photo/individual/Veronika/'; // Папка с фотографиями
 
 for (let i = 1; i <= photoCount; i++) {
