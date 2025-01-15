@@ -125,6 +125,12 @@ section {
     text-align: center;
 }
 
+.price strong {
+    font-size: 2.0rem; /* Задайте размер шрифта */
+    font-weight: bold; /* Сделайте текст жирным, если нужно */
+}
+
+
 /* Dropdown menu styles */
 .dropdown-content {
     display: none;
