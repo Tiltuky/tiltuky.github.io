@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальные Фотосессии</title>
+    <link rel="stylesheet" href="css/family/fam1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Photographer Yuliana Ryzhikh</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Портфолио</a>
+                    <ul class="dropdown-content">
+                        <li><a href="individual.html">Индивидуальные</a></li>
+                        <li><a href="lovestory.html">Lovestory</a></li>
+                        <li><a href="family.html">Семейные</a></li>
+                    </ul>
+                </li>
+                <li><a href="pricing.html">Стоимость</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery" id="photo-gallery"></section>
+    
+    <!-- Модальное окно для увеличения фото -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <span class="next">&#10095;</span>
+    </div>
+
+    <footer>
+        <p>Юлиана Рыжих</p>
+        <p>Калининград</p>
+        <p>Телефон: +7 951 090 00 78</p>
+    </footer>
+
+    <script src="modallwindow.js"></script>
+    <script src="scripts/family/f8.js"></script>
+</body>
+</html>

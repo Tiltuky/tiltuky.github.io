@@ -1,5 +1,5 @@
 const gallery = document.getElementById('photo-gallery');
-const photoCount = 28; // Количество фотографий
+const photoCount = 21; // Количество фотографий
 const photoFolder = 'photo/lovestory/Predlojenie/'; // Папка с фотографиями
 
 for (let i = 1; i <= photoCount; i++) {
